@@ -1,0 +1,16 @@
+[debug] [2020-07-31T10:32:45.129Z] ----------------------------------------------------------------------
+[debug] [2020-07-31T10:32:45.130Z] Command:       /Users/calvindurramt/.nvm/versions/node/v13.6.0/bin/node /Users/calvindurramt/.nvm/versions/node/v13.6.0/bin/firebase deploy
+[debug] [2020-07-31T10:32:45.131Z] CLI Version:   8.6.0
+[debug] [2020-07-31T10:32:45.131Z] Platform:      darwin
+[debug] [2020-07-31T10:32:45.131Z] Node Version:  v13.6.0
+[debug] [2020-07-31T10:32:45.131Z] Time:          Fri Jul 31 2020 12:32:45 GMT+0200 (South Africa Standard Time)
+[debug] [2020-07-31T10:32:45.131Z] ----------------------------------------------------------------------
+[debug] [2020-07-31T10:32:45.131Z] 
+[debug] [2020-07-31T10:32:45.139Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-31T10:32:45.139Z] > authorizing via signed-in user
+[debug] [2020-07-31T10:32:45.139Z] [iam] checking project vectra-todo for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-07-31T10:32:45.142Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vectra-todo:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2020-07-31T10:32:46.418Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 31 Jul 2020 10:32:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=333","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-31T10:32:46.420Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vectra-todo  
+ 
