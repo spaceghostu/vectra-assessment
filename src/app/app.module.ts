@@ -13,10 +13,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import { TodoComponent } from './todo-list/todo/todo.component';
 
 
 @NgModule({
-  declarations: [AppComponent, TodoListComponent],
+  declarations: [AppComponent, TodoListComponent, TodoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

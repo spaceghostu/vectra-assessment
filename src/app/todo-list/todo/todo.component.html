@@ -1,0 +1,43 @@
+<mat-card class="todo">
+  <div class="header">
+    <div class="title">{{ todo.category | titlecase }}</div>
+
+    <div class="icon" [ngSwitch]="todo.category">
+      <mat-icon
+        *ngSwitchCase="'call'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        >phone</mat-icon
+      >
+      <mat-icon
+        *ngSwitchCase="'meeting'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        >meeting_room</mat-icon
+      >
+      <mat-icon
+        *ngSwitchCase="'research'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        >biotech</mat-icon
+      >
+      <mat-icon
+        *ngSwitchCase="'place'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        >location_on</mat-icon
+      >
+      <mat-icon
+        *ngSwitchCase="'buy'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        >add_shopping_cart</mat-icon
+      >
+    </div>
+  </div>
+  <div class="body">
+      <div class="content">
+        {{todo.todo}}
+      </div>
+  </div>
+</mat-card>
