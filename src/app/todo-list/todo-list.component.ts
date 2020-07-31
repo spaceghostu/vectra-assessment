@@ -10,9 +10,11 @@ export class TodoListComponent implements OnInit {
 
   @Input() todos: Todo[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    console.log(this.todos);
   }
 
 }

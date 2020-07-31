@@ -1,9 +1,19 @@
-  <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-     <mat-icon>menu</mat-icon>
-   </button>
-    <span class="logo">Todo</span>
-    <button matButton>New Todo</button>
-  </mat-toolbar>
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="logo">Todo</span>
+  <div class="icons">
+    <mat-icon class="icon">phone</mat-icon>
+    <mat-icon class="icon">meeting_room</mat-icon>
+    <mat-icon class="icon">biotech</mat-icon>
+    <mat-icon class="icon">location_on</mat-icon>
+    <mat-icon class="icon">add_shopping_cart</mat-icon>
+  </div>
+</mat-toolbar>
 
-  <app-todo-list [todos]="todos | async"></app-todo-list>
+<app-todo-list [todos]="todos | async"></app-todo-list>
