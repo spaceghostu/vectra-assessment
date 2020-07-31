@@ -1,1 +1,3 @@
-<app-todo *ngFor="let t of todos" [todo]="t"></app-todo>
+<div *ngFor="let group of todos | async">
+    <app-todo *ngFor="let todo of group" [todo]="todo"></app-todo>
+</div>

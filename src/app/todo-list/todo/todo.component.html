@@ -1,4 +1,4 @@
-<mat-card class="todo">
+<mat-card class="todo" [class.complete]="todo.isComplete">
   <div class="header">
     <div class="title">{{ todo.category | titlecase }}</div>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from '../todo.interface';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,13 +9,13 @@ import { Todo } from '../todo.interface';
 })
 export class TodoListComponent implements OnInit {
 
-  @Input() todos: Todo[];
+  @Input() todos: Observable<Todo[]>;
 
   constructor() {
   }
 
   ngOnInit(): void {
-    console.log(this.todos);
+    this.todos.subscribe(todos => console.log(todos))
   }
 
 }
