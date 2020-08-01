@@ -14,7 +14,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { TodoComponent } from './todo-list/todo/todo.component';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [AppComponent, TodoListComponent, TodoComponent],
@@ -28,6 +28,7 @@ import { TodoComponent } from './todo-list/todo/todo.component';
     MatCardModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    MatSidenavModule,
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent],

@@ -1,19 +1,29 @@
-<mat-toolbar>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span class="logo">Todo</span>
-  <div class="icons">
-    <mat-icon class="icon">phone</mat-icon>
-    <mat-icon class="icon">meeting_room</mat-icon>
-    <mat-icon class="icon">biotech</mat-icon>
-    <mat-icon class="icon">location_on</mat-icon>
-    <mat-icon class="icon">add_shopping_cart</mat-icon>
-  </div>
-</mat-toolbar>
 
-<app-todo-list [todos]="todosGrouped"></app-todo-list>
+
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="over">
+    <p>Auto-resizing sidenav</p>
+  </mat-drawer>
+
+  <div>
+    <mat-toolbar>
+      <button
+        (click)="drawer.toggle()"
+        mat-icon-button
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="logo">Todo</span>
+      <div class="icons">
+        <mat-icon class="icon">phone</mat-icon>
+        <mat-icon class="icon">meeting_room</mat-icon>
+        <mat-icon class="icon">biotech</mat-icon>
+        <mat-icon class="icon">location_on</mat-icon>
+        <mat-icon class="icon">add_shopping_cart</mat-icon>
+      </div>
+    </mat-toolbar>
+    <app-todo-list [todos]="todosGrouped"></app-todo-list>
+  </div>
+
+</mat-drawer-container>
