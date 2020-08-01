@@ -19,7 +19,6 @@ export class TodoComponent implements OnInit {
   }
   ngOnInit() {
     this.itemRef = this.db.object(`todos/${this.todo.index}`);
-    console.log(this.todo.index);
   }
   handleArchiveButton() {}
 

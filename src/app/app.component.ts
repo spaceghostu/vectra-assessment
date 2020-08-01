@@ -11,15 +11,15 @@ import { MatDrawer } from '@angular/material/sidenav';
 })
 export class AppComponent {
   todos: Observable<Todo[]>;
-  filterCategory;
-  @ViewChild('drawer') drawer: MatDrawer;
+  // filterCategory;
+  // @ViewChild('drawer') drawer: MatDrawer;
 
   constructor(service: TodoService) {
     this.todos = service.getTodos();
   }
 
-  setFilter(category) {
-    this.filterCategory = category;
-    this.drawer.toggle();
-  }
+  // setFilter(category) {
+  //   this.filterCategory = category;
+  //   this.drawer.toggle();
+  // }
 }
