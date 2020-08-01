@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class TodoListComponent implements OnInit {
 
   @Input() todos: Todo[];
-  @Input() filterTerm: any;
+  @Input() filterCategory: any;
   constructor() {
   }
 
