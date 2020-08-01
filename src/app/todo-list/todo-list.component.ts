@@ -10,12 +10,11 @@ import { Observable } from 'rxjs';
 export class TodoListComponent implements OnInit {
 
   @Input() todos: Todo[];
-
+  @Input() filterTerm: any;
   constructor() {
   }
 
   ngOnInit(): void {
-    this.todos = this.todos.filter(t => t.active);
   }
 
 }
