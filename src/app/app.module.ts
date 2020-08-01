@@ -14,10 +14,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { TodoComponent } from './todo-list/todo/todo.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SortByPipe } from './sort.pipe';
 
 @NgModule({
-  declarations: [AppComponent, TodoListComponent, TodoComponent],
+  declarations: [AppComponent, TodoListComponent, TodoComponent, SortByPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

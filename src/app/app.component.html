@@ -16,14 +16,12 @@
       </button>
       <span class="logo">Todo</span>
       <div class="icons">
-        <mat-icon class="icon">phone</mat-icon>
-        <mat-icon class="icon">meeting_room</mat-icon>
-        <mat-icon class="icon">biotech</mat-icon>
-        <mat-icon class="icon">location_on</mat-icon>
-        <mat-icon class="icon">add_shopping_cart</mat-icon>
+        <button mat-icon-button>
+          <mat-icon class="icon">add</mat-icon>
+        </button>
       </div>
     </mat-toolbar>
-    <app-todo-list [todos]="todosGrouped"></app-todo-list>
+    <app-todo-list [todos]="todos | async"></app-todo-list>
   </div>
 
 </mat-drawer-container>

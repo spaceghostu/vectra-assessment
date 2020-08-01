@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Todo } from './todo.interface';
 import { groupBy, mergeMap, toArray, tap, map } from 'rxjs/operators';
+import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,8 @@ import { groupBy, mergeMap, toArray, tap, map } from 'rxjs/operators';
 export class AppComponent {
   todos: Observable<Todo[]>;
   todosGrouped: any;
-  constructor(db: AngularFireDatabase) {
-    this.todos = db.list<Todo>('todos').valueChanges();
+  constructor(service: TodoService) {
+    this.todos = service.getTodos();
 
     // this.todos.subscribe(
     //   (res) => console.log('HTTP response', res),
@@ -23,14 +24,14 @@ export class AppComponent {
     // );
 
 
-    this.todosGrouped = this.todos.pipe(
-      map(todos =>
-        of(...todos).pipe(
-          groupBy(p => p.isComplete),
-          mergeMap(group => group.pipe(toArray()))
-        )
-      ),
-      mergeMap(group => group.pipe(toArray()))
-    );
+    // this.todosGrouped = this.todos.pipe(
+    //   map(todos =>
+    //     of(...todos).pipe(
+    //       groupBy(p => !p.active),
+    //       mergeMap(group => group.pipe(toArray()))
+    //     )
+    //   ),
+    //   mergeMap(group => group.pipe(toArray()))
+    // );
   }
 }

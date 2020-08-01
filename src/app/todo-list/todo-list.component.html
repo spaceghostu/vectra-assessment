@@ -1,3 +1,1 @@
-<div *ngFor="let group of todos | async">
-    <app-todo *ngFor="let todo of group" [todo]="todo"></app-todo>
-</div>
+<app-todo *ngFor="let todo of todos | sortBy:'asc':'active'" [todo]="todo"></app-todo>

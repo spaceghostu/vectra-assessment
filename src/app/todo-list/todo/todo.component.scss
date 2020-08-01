@@ -6,7 +6,7 @@
         justify-content: center;
         align-items: center;
         padding: 10px;
-        border-bottom: 1px solid #313131;
+        border-bottom: 1px solid #4a4a4a;
         .title {
             font-size: 20px;
         }
@@ -27,7 +27,8 @@
     }
     .body {
         padding: 10px;
-        border-top: 1px solid #4a4a4a;
+        border-top: 1px solid #313131;
+        border-bottom: 1px solid #313131;
         .content {
             margin: 30px;
         }
@@ -35,5 +36,18 @@
     &.complete {
         opacity: 0.5;
         pointer-events: none;
+    }
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        border-top: 1px solid #4a4a4a;
+        button {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        mat-icon {
+            color: var(--accent-lighter-color);
+        }
     }
 }

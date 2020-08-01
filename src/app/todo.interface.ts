@@ -1,6 +1,6 @@
 export interface Todo {
   index?: number;
-  isComplete?: boolean;
+  active?: boolean;
   place?: string;
   research?: string;
   call?: string;

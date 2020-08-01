@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
 })
 export class TodoListComponent implements OnInit {
 
-  @Input() todos: Observable<Todo[]>;
+  @Input() todos: Todo[];
 
   constructor() {
   }
 
   ngOnInit(): void {
-    this.todos.subscribe(todos => console.log(todos))
+    this.todos = this.todos.filter(t => t.active);
   }
 
 }
