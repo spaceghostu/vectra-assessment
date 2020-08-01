@@ -19,3 +19,25 @@
 ::ng-deep.mat-drawer-inner-container {
     width: 270px !important;
 }
+
+
+.nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-bottom: 1px solid black;
+        width: 100%;
+        box-shadow: inset 0px -4px 10px -5px rgba(0, 0, 0, 0.75);
+    }
+    button {
+        width: 100%;
+        border-top: 1px solid #4a4a4a;
+        border-bottom: 1px solid #313131;
+    }
+}

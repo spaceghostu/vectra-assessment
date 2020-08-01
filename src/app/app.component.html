@@ -1,8 +1,18 @@
 
 
-<mat-drawer-container autosize>
+<mat-drawer-container>
   <mat-drawer #drawer mode="over">
-    <p>Auto-resizing sidenav</p>
+    <div class="nav">
+      <div class="header">
+        Only Show:
+      </div>
+      <button mat-button color="accent" (click)="setFilter('all')">All</button>
+      <button mat-button color="accent" (click)="setFilter('place')">Place</button>
+      <button mat-button color="accent" (click)="setFilter('research')">Research</button>
+      <button mat-button color="accent" (click)="setFilter('call')">Call</button>
+      <button mat-button color="accent" (click)="setFilter('meeting')">Meeting</button>
+      <button mat-button color="accent" (click)="setFilter('buy')">Buy</button>
+    </div>
   </mat-drawer>
 
   <div>
