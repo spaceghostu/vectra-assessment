@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Todo } from './todo.interface';
 import { TodoService } from './todo.service';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { TodoService } from './todo.service';
 export class AppComponent {
   todos: Observable<Todo[]>;
   filterCategory;
-  // @ViewChild('drawer') drawer: ElementRef;
+  @ViewChild('drawer') drawer: MatDrawer;
 
   constructor(service: TodoService) {
     this.todos = service.getTodos();
@@ -19,6 +20,6 @@ export class AppComponent {
 
   setFilter(category) {
     this.filterCategory = category;
-    // this.drawer.nativeElement.toggle();
+    this.drawer.toggle();
   }
 }
